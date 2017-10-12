@@ -20,7 +20,7 @@
 */
 
 #include "runtime/Module.h"
-#include "cinder/Log.h"
+//#include "cinder/Log.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>

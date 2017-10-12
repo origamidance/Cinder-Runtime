@@ -5,8 +5,10 @@
 
 #include "cinder/app/App.h"
 #include "cinder/Xml.h"
-#include "cinder/Log.h"
+//#include "cinder/Log.h"
 #include "cinder/Utilities.h"
+
+#include <fstream>
 
 using namespace std;
 using namespace ci;
@@ -55,7 +57,7 @@ namespace {
 			configuration = "Release";
 	#endif
 
-	#if defined( CINDER_SHARED )
+	#if defined( CINDER_SHARED ) || defined( CINDER_SHARED_BUILD )
 			configuration += "_Shared";
 	#endif
 		
@@ -415,7 +417,7 @@ CompilerMsvc::BuildSettings& CompilerMsvc::BuildSettings::generateFactory( bool 
 
 CompilerMsvc::CompilerMsvc()
 {
-	CI_LOG_V( "Tools / Options / Debugging / General / Enable Edit and Continue should be disabled! (And if file locking issues persist try enabling Use Native Compatibility Mode)" );
+	//CI_LOG_V( "Tools / Options / Debugging / General / Enable Edit and Continue should be disabled! (And if file locking issues persist try enabling Use Native Compatibility Mode)" );
 
 	initializeProcess();
 }

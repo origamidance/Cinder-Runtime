@@ -1,6 +1,6 @@
 #pragma once
 
-#if ! defined( RT_COMPILED ) && defined( CINDER_SHARED )
+#if defined( CINDER_SHARED ) || defined( CINDER_SHARED_BUILD )
 
 #include "cinder/Filesystem.h"
 #include "cinder/FileWatcher.h"

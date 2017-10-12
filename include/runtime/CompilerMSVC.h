@@ -30,7 +30,7 @@ using CompilerPtr = std::unique_ptr<class CompilerMsvc>; // temp shortcut
 using CompilerMsvcRef = std::shared_ptr<class CompilerMsvc>;
 using CompilerMsvcPtr = std::unique_ptr<class CompilerMsvc>;
 
-class CompilerMsvc : public CompilerBase {
+class CI_API CompilerMsvc : public CompilerBase {
 public:
 	CompilerMsvc();
 	~CompilerMsvc();
@@ -38,7 +38,7 @@ public:
 	static CompilerMsvc& instance();
 	
 	//! Describes the list of Options and arguments available when building a file
-	class BuildSettings {
+	class CI_API BuildSettings {
 	public:
 		BuildSettings();
 		BuildSettings( bool defaultSettings );

@@ -31,9 +31,9 @@ using ProcessPtr = std::unique_ptr<class Process>;
 
 namespace runtime {
 
-class CompilationResult;
+class CI_API CompilationResult;
 
-class CompilerBase {
+class CI_API CompilerBase {
 public:
 	CompilerBase();
 	virtual ~CompilerBase();
@@ -57,7 +57,7 @@ protected:
 	std::vector<std::string>				mWarnings;
 };
 
-class CompilationResult {
+class CI_API CompilationResult {
 public:
 	//! Returns the path of the compilation output
 	ci::fs::path getOutputPath() const;
@@ -98,7 +98,7 @@ protected:
 	std::vector<std::string> mWarnings;
 };
 
-class CompilerException : public ci::Exception {
+class CI_API CompilerException : public ci::Exception {
 public:
 	CompilerException( const std::string &message ) : ci::Exception( message ) {}
 };

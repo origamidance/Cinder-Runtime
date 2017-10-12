@@ -22,6 +22,8 @@
  */
 #pragma once
 
+#include "cinder/Export.h"
+
 #include <string>
 #include <memory>
 #include <thread>
@@ -33,7 +35,7 @@
 using ProcessPtr = std::unique_ptr<class Process>;
 using ProcessRef = std::shared_ptr<class Process>;
 
-class Process {
+class CI_API Process {
 public:
 	//! Constructs and initialize a new process in the current directory. Will by default redirect the content of StdOut, StdErr and StdIn.
 	Process( const std::string &cmd, bool redirectOutput = true, bool redirectError = true, bool redirectInput = true );
@@ -125,7 +127,7 @@ inline ProcessPtr& operator <<(ProcessPtr& process, std::ostream&(*f)(std::ostre
     return process;
 }
 
-class ProcessExc : public std::exception {
+class CI_API ProcessExc : public std::exception {
 public:
 	ProcessExc() {}
 	ProcessExc( const std::string &description ) : mDescription( description ) {}

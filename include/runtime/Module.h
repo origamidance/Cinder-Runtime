@@ -28,7 +28,7 @@ namespace runtime {
 using ModulePtr = std::unique_ptr<class Module>;
 using ModuleRef = std::shared_ptr<class Module>;
 
-class Module : public std::enable_shared_from_this<Module> {
+class CI_API Module : public std::enable_shared_from_this<Module> {
 public:
 	//! Constructs a new Module object
 	Module( const ci::fs::path &path );
